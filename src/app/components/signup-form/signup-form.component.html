@@ -1,0 +1,40 @@
+<div class="modal-header">
+    <img class="logo" src="assets/images/logo.png" [style.height]="'100px'">
+  
+    <button type="button" class="close" data-dismiss="modal" (click)="closeModal('dismiss')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+  
+  </div>
+  <h2 [ngStyle]="{'text-align':'center','padding-top':'5px'}">REGISTER</h2>
+  <div class="container">
+  <div class="modal-body">
+    <form class="row g-3">
+      <div class="col-md-6">
+        <label for="inputFirstName4" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="inputFirstName4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputLastName4" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="inputLastName4">
+      </div>
+      <div class="col-12">
+        <label for="inputEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail" placeholder="">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-control" id="inputPassword4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword5" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="inputPassword5">
+      </div>
+      <p>Already have an account? <a class="form-text" (click)="openModalLogin('dismiss')">Login</a></p>
+    </form>
+  </div>
+  </div>
+  <div class="modal-footer">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+  </div>
