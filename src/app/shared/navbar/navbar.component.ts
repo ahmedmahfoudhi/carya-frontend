@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { LoginFormComponent } from '../../login-form/login-form.component';
-import { SignupFormComponent } from '../../signup-form/signup-form.component';
+import { LoginFormComponent } from 'src/app/components/login-form/login-form.component';
+import { SignupFormComponent } from 'src/app/components/signup-form/signup-form.component';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
