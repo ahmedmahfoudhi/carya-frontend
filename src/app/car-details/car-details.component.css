@@ -1,0 +1,49 @@
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7.2rem;
+    flex-direction: column;
+}
+.car-brand{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.features{
+    margin: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+p{
+    margin:0;
+}
+.feature{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.2rem;
+    margin-top: 1rem;
+}
+.feature-text{
+    margin: 10px;
+}
+.sl-title{
+    color: #acacac;
+}
+.circular{
+    border-radius: 50%;
+    border: 2px solid #9E7676;
+    width: 4.7rem;
+    height: 4.7rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature-svg{
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+    filter: invert(25%) sepia(7%) saturate(1128%) hue-rotate(314deg) brightness(105%) contrast(91%);}
