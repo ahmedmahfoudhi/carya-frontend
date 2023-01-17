@@ -31,6 +31,7 @@ import { SideNavComponent } from './components/dashboard/side-nav/side-nav.compo
 import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
 import { RequestsComponent } from './components/dashboard/requests/requests.component';
 import { HomeComponent } from './components/home/home.component';
+import { HomeSectionsComponent } from './components/home-sections/home-sections.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,6 +53,7 @@ import { HomeComponent } from './components/home/home.component';
     DashboardComponent,
     RequestsComponent,
     HomeComponent,
+    HomeSectionsComponent,
   ],
   imports: [
     BrowserModule,

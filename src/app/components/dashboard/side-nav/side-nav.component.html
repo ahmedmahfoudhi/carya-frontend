@@ -1,19 +1,28 @@
-<div class="sidenav" [ngClass]="collapsed ?'sidenav-collapsed' : '' ">
-    <div class="logo-container">
-        <img class="logo" src="assets/images/logo.png"  (click)="toggleCollapse()">
-        <div class="logo-text" *ngIf="collapsed"></div>
-        <button class="close-btn"  *ngIf="collapsed" (click)="closeSidenav()">
-            <i class="fal fa-times close-icon"></i>
-        </button>
-    </div>
-    <ul class="sidenav-nav">
-        <li class="sidenav-nav-item" *ngFor="let data of navData">
-            <a class="sidenav-nav-link" [routerLink]="[data.routeLink]" routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}">
-                <i [ngClass]="collapsed ?'sidenav-link-icon' : 'sidenav-link-icon2' " [class]="data.icon">
-                    <span class="sidenav-link-text" *ngIf="collapsed">{{data.label}}</span>
-                </i>
-            </a>
-        </li>
-    </ul>
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <img class="logo" src="assets/images/logo.png" (click)="toggleCollapse()" />
+    <div class="logo-text" *ngIf="collapsed"></div>
+    <button class="close-btn" *ngIf="collapsed" (click)="closeSidenav()">
+      <i class="fal fa-times close-icon"></i>
+    </button>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a
+        class="sidenav-nav-link"
+        [routerLink]="[data.routeLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <i
+          [ngClass]="collapsed ? 'sidenav-link-icon' : 'sidenav-link-icon2'"
+          [class]="data.icon"
+        >
+          <span class="sidenav-link-text" *ngIf="collapsed">{{
+            data.label
+          }}</span>
+        </i>
+      </a>
+    </li>
+  </ul>
 </div>
