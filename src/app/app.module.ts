@@ -10,6 +10,19 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
+
+import { ItemsListComponent } from './components/items/items-list/items-list.component';
+import { SingleItemComponent } from './components/items/single-item/single-item.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterComponent } from './components/items/filter/filter.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ToastrModule } from 'ngx-toastr';
+import { HttpClientModule } from '@angular/common/http';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ContactComponent } from './components/contact/contact.component';
 import { BodyComponent } from './components/dashboard/body/body.component';
 import { MyItemsComponent } from './components/dashboard/my-items/my-items.component';
@@ -27,6 +40,10 @@ import { HomeComponent } from './components/home/home.component';
     LoginFormComponent,
     SignupFormComponent,
     OurTeamComponent,
+    ItemsListComponent,
+    SingleItemComponent,
+    FilterComponent,
+    SpinnerComponent,
     ContactComponent,
     BodyComponent,
     MyItemsComponent,
@@ -39,9 +56,20 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    BrowserAnimationsModule,
+    NgbModule,
+    FontAwesomeModule,
+    NgxSliderModule,
+    FormsModule,
+    NgxPaginationModule,
+    ToastrModule.forRoot({
+      timeOut: 5000,
+      positionClass: 'toast-bottom-left',
+      preventDuplicates: true,
+    }),
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

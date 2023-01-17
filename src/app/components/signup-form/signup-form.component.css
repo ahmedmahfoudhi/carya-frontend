@@ -1,15 +1,32 @@
 
-.form-text{
-    font-weight: bold;
-    cursor: pointer;
+.form-container {
+  overflow-y: auto;
+
+.form-text {
+  font-weight: bold;
+  cursor: pointer;
 }
-.form-text:hover{
+.form-text:hover {
   color: rgb(129, 91, 91);
 }
 .btn {
   background-color: rgb(129, 91, 91);
   border-color: rgb(129, 91, 91);
 }
-.btn:hover{
+.btn:hover {
   color: rgb(255, 248, 234);
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.help-block {
+  color: red;
 }

@@ -1,40 +1,148 @@
 <div class="modal-header">
-    <img class="logo" src="assets/images/logo.png" [style.height]="'100px'">
-  
-    <button type="button" class="close" data-dismiss="modal" (click)="closeModal('dismiss')">
-        <span aria-hidden="true">&times;</span>
-    </button>
-  
+  <img class="logo" src="assets/images/logo.png" [style.height]="'100px'" />
+
+  <button
+    type="button"
+    class="close"
+    data-dismiss="modal"
+    (click)="closeModal('dismiss')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<h2
+  *ngIf="!isLoading"
+  [ngStyle]="{ 'text-align': 'center', 'padding-top': '5px' }"
+>
+  REGISTER
+</h2>
+<p *ngIf="isLoading" class="text-center">
+  Please wait, your request is being processed.
+</p>
+<div class="form-container">
+  <div *ngIf="!isLoading" class="container">
+    <div class="modal-body">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="row g-3">
+        <div class="col-md-6">
+          <label for="inputFirstName4" class="form-label">First Name</label>
+          <input
+            type="text"
+            #firstName="ngModel"
+            ngModel
+            required
+            class="form-control"
+            id="inputFirstName4"
+            minlength="3"
+            name="firstName"
+          />
+          <span *ngIf="!firstName.valid && firstName.touched" class="help-block"
+            >Firstname should have at least 3 characters.</span
+          >
+        </div>
+        <div class="col-md-6">
+          <label for="inputLastName4" class="form-label">Last Name</label>
+          <input
+            type="text"
+            #lastName="ngModel"
+            ngModel
+            required
+            class="form-control"
+            id="inputLastName4"
+            minlength="3"
+            name="lastName"
+          />
+          <span *ngIf="!lastName.valid && lastName.touched" class="help-block"
+            >Lastname should have at least 3 characters.</span
+          >
+        </div>
+        <div class="col-12">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="inputEmail"
+            placeholder=""
+            required
+            ngModel
+            #email="ngModel"
+            email
+            name="email"
+          />
+          <span *ngIf="!email.valid && email.touched" class="help-block">
+            Invalid Email
+          </span>
+        </div>
+        <div class="col-12">
+          <label for="inputCin" class="form-label">CIN : </label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputCin"
+            placeholder=""
+            name="cin"
+            ngModel
+            #cin="ngModel"
+            minlength="8"
+            maxlength="8"
+            required
+          />
+          <span *ngIf="!cin.valid && cin.touched" class="help-block">
+            Invalid CIN
+          </span>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input
+            type="password"
+            name="password"
+            ngModel
+            #password="ngModel"
+            minlength="8"
+            required
+            class="form-control"
+            id="inputPassword4"
+          />
+          <span *ngIf="!password.valid && password.touched" class="help-block">
+            Invalid password
+          </span>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword5" class="form-label"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            #confirmPassword="ngModel"
+            name="confirmPassword"
+            ngModel
+            required
+            class="form-control"
+            id="inputPassword5"
+          />
+          <span
+            *ngIf="
+              (!confirmPassword.valid ||
+                confirmPassword.value != password.value) &&
+              confirmPassword.touched
+            "
+            class="help-block"
+          >
+            Passwords do not match
+          </span>
+        </div>
+        <p>
+          Already have an account?
+          <a class="form-text" (click)="openModalLogin('dismiss')">Login</a>
+        </p>
+        <div class="modal-footer">
+          <button type="submit" [disabled]="!f.valid" class="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-  <h2 [ngStyle]="{'text-align':'center','padding-top':'5px'}">REGISTER</h2>
-  <div class="container">
-  <div class="modal-body">
-    <form class="row g-3">
-      <div class="col-md-6">
-        <label for="inputFirstName4" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="inputFirstName4">
-      </div>
-      <div class="col-md-6">
-        <label for="inputLastName4" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="inputLastName4">
-      </div>
-      <div class="col-12">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="">
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword5" class="form-label">Confirm Password</label>
-        <input type="password" class="form-control" id="inputPassword5">
-      </div>
-      <p>Already have an account? <a class="form-text" (click)="openModalLogin('dismiss')">Login</a></p>
-    </form>
+  <div *ngIf="isLoading" class="spinner-container">
+    <app-spinner></app-spinner>
   </div>
-  </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Submit</button>
-    
-  </div>
+</div>
