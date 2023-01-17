@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
+
 import { ItemsListComponent } from './components/items/items-list/items-list.component';
 import { SingleItemComponent } from './components/items/single-item/single-item.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -22,6 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ContactComponent } from './components/contact/contact.component';
+import { BodyComponent } from './components/dashboard/body/body.component';
+import { MyItemsComponent } from './components/dashboard/my-items/my-items.component';
+import { AddItemComponent } from './components/dashboard/add-item/add-item.component';
+import { SideNavComponent } from './components/dashboard/side-nav/side-nav.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { RequestsComponent } from './components/dashboard/requests/requests.component';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +44,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SingleItemComponent,
     FilterComponent,
     SpinnerComponent,
+    ContactComponent,
+    BodyComponent,
+    MyItemsComponent,
+    AddItemComponent,
+    SideNavComponent,
+    DashboardComponent,
+    RequestsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

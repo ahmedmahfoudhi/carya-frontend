@@ -2,9 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@700&family=Montserrat&display=swap');
 
+
 :root{
     --bs-title-font-family: 'Monda', sans-serif;
     --bs-text-font-family: 'Montserrat', sans-serif;
+}
+
+*{
+    font-family: "Monda";
+    font-weight: bold;
 }
 
 body{
@@ -14,3 +20,6 @@ body{
 h1,h2,h3,h4,h5,h6 {
     font-family: var(--bs-title-font-family);
 }
+
+
+
