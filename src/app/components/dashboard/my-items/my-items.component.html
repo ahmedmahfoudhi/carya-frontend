@@ -1,32 +1,22 @@
-<section>
-<div class="wrapper">
+<section class="container">
+  <div class="wrapper">
     <div class="section_title">
-        <h2>MY ITEMS</h2>
-        </div>
+      <h2>MY ITEMS</h2>
+    </div>
 
     <div class="flexbox">
-
-        <div class="box" *ngFor="let data of myItems">
-            <h3>{{data.title}}</h3>
-                <div class="scrollbar"  id="content-scroll">
-            <p class="third">{{data.price}}</p>
-            <span class="third">
-                <img
-               
-        src="{{data.imgSrc}}"
-        class="d-block w-100"
-        alt="..."
-      />
-            </span>
-            <br>
-                <h2>Description :</h2>
-                <p class="third contents">{{data.description}}</p>
-            
+      <div class="box" *ngFor="let data of myItems">
+        <h3>{{ data.title }}</h3>
+        <div class="scrollbar" id="content-scroll">
+          <p class="third">{{ data.price }}</p>
+          <span class="third">
+            <img src="{{ data.imgSrc }}" class="d-block w-100" alt="..." />
+          </span>
+          <br />
+          <h2>Description :</h2>
+          <p class="third contents">{{ data.description }}</p>
         </div>
-        </div>
-        
-
+      </div>
     </div>
-    
-</div>
+  </div>
 </section>
