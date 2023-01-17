@@ -1,29 +1,76 @@
 <div class="modal-header">
-    <img class="logo" src="assets/images/logo.png" [style.height]="'100px'">
-  
-    <button type="button" class="close" data-dismiss="modal" (click)="closeModal('dismiss')">
-        <span aria-hidden="true">&times;</span>
-    </button>
-  
-  </div>
-  <h2 [ngStyle]="{'text-align':'center','padding-top':'5px'}">LOGIN</h2>
-  <div class="container">
-  <div class="modal-body">
-    <form class="row g-3">
-      <div class="col-12">
-        <label for="inputEmail" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="">
+  <img class="logo" src="assets/images/logo.png" [style.height]="'100px'" />
+
+  <button
+    type="button"
+    class="close"
+    data-dismiss="modal"
+    (click)="closeModal('dismiss')"
+  >
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<h2
+  *ngIf="!isLoading"
+  [ngStyle]="{ 'text-align': 'center', 'padding-top': '5px' }"
+>
+  LOGIN
+</h2>
+<p class="text-center" *ngIf="isLoading">
+  Please wait, your request is being processed
+</p>
+<div class="form-container">
+  <div *ngIf="!isLoading" class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" class="row g-3">
+      <div class="modal-body">
+        <div class="col-12">
+          <label for="inputEmail" class="form-label">Email</label>
+          <input
+            type="email"
+            #email="ngModel"
+            class="form-control"
+            id="inputEmail"
+            name="email"
+            placeholder=""
+            ngModel
+            required
+            email
+          />
+          <span *ngIf="!email.valid && email.touched" class="help-block">
+            Invalid Email
+          </span>
+        </div>
+        <div class="col-md-12">
+          <label for="inputPassword4" class="form-label">Password</label>
+          <input
+            type="password"
+            ngModel
+            #password="ngModel"
+            name="password"
+            class="form-control"
+            id="inputPassword4"
+            required
+            minlength="8"
+          />
+          <span class="help-block" *ngIf="!password.valid && password.touched">
+            Invalid Password
+          </span>
+        </div>
+        <p>
+          Not a register user?
+          <a class="form-text" (click)="openModalRegister('dismiss')"
+            >Sign Up</a
+          >
+        </p>
       </div>
-      <div class="col-md-12">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
+      <div class="modal-footer">
+        <button type="submit" [disabled]="!f.valid" class="btn btn-primary">
+          Submit
+        </button>
       </div>
-      <p>Not a register user? <a class="form-text" (click)="openModalRegister('dismiss')">Sign Up</a></p>
     </form>
   </div>
+  <div *ngIf="isLoading" class="spinner-container">
+    <app-spinner></app-spinner>
   </div>
-  <div class="modal-footer">
-    <button type="submit" class="btn btn-primary">Submit</button>
-    
-  </div>
-  
+</div>

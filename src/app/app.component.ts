@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { faCoffee, faFilm } from '@fortawesome/free-solid-svg-icons';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'carya-frontend';
+
+
 }

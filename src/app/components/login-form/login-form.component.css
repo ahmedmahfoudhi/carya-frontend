@@ -2,18 +2,30 @@
 <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="closeModal('close')">Close</button>
   <button type="button" class="btn btn-primary" (click)="closeModal('changes saved!')">Save changes</button>*/
 
-
-  .form-text{
-    font-weight: bold;
-    cursor: pointer;
+.form-text {
+  font-weight: bold;
+  cursor: pointer;
 }
-.form-text:hover{
+.form-container {
+  overflow-y: auto;
+}
+.form-text:hover {
   color: rgb(129, 91, 91);
 }
 .btn {
   background-color: rgb(129, 91, 91);
   border-color: rgb(129, 91, 91);
 }
-.btn:hover{
+.btn:hover {
   color: rgb(255, 248, 234);
+}
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

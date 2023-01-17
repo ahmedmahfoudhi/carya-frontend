@@ -1,0 +1,12 @@
+.filter {
+  padding: 20px;
+}
+
+.controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-40 {
+  width: 40%;
+}

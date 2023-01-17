@@ -1,0 +1,33 @@
+<div class="filter">
+  <div class="mb-3">
+    <label class="form-label">Category :</label>
+    <select class="form-select" aria-label="Default select example">
+      <option value="all" selected>All</option>
+      <option value="cars">Cars</option>
+      <option value="houses">Houses</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Governorate :</label>
+    <select class="form-select" aria-label="Default select example">
+      <option value="all" selected>All</option>
+      <option value="cars">Cars</option>
+      <option value="houses">Houses</option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="min-price" class="form-label">Price :</label>
+    <div class="price-input">
+      <ngx-slider
+        [(value)]="minValue"
+        [(highValue)]="maxValue"
+        [options]="options"
+      ></ngx-slider>
+    </div>
+  </div>
+</div>
+<div class="controls-wrapper">
+  <button class="btn btn-info w-40" (click)="applyFilter()">Filter</button>
+
+  <button class="btn btn-secondary w-40" (click)="resetFilter()">Reset</button>
+</div>
