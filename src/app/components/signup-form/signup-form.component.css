@@ -1,3 +1,7 @@
+*{
+  font-family:'Monda';
+  font-weight: bold;
+}
 .form-text{
     font-weight: bold;
     cursor: pointer;
