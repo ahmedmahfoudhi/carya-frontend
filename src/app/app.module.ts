@@ -10,7 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
-
+import { ContactComponent } from './components/contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +19,8 @@ import { OurTeamComponent } from './components/our-team/our-team.component';
     NavbarComponent,
     LoginFormComponent,
     SignupFormComponent,
-    OurTeamComponent
+    OurTeamComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

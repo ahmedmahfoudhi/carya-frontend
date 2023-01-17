@@ -1,5 +1,7 @@
-
-
+*{
+    font-family:'Monda';
+    font-weight: bold;
+}
 section {
     position: relative;
     display:flex;
@@ -37,6 +39,7 @@ section::after{
     
 }
 .header h2{
+
     font-size: 50px;
 }
 .container{
@@ -107,7 +110,6 @@ section::after{
     object-fit: cover;
 }
 .container .card .content .contentBx h3 {
-    
     color: rgb(0, 0, 0);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -140,6 +142,7 @@ section::after{
 .container .card .sci {
     position: absolute;
     bottom: 50px;
+    margin-right: 25px;
     display: flex;
 }
 .container .card .sci li {
