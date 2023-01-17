@@ -1,0 +1,18 @@
+<section>
+<div class="section_title">
+    <h2>MY REQUESTS</h2>
+    </div>
+<div *ngFor="let data of myRequests" class="container center">
+  <div class="card">
+    <h2>Request From : <span>{{data.name}}</span> </h2>
+    <hr/>
+    <p>
+        For the Item : <span>{{data.item}}</span> 
+        <br><br>
+        Phone : <span> {{data.phone}}</span> 
+        <br><br>
+        Message : <span> {{data.message}}</span> 
+    </p>
+  </div>
+</div>
+</section>
