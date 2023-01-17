@@ -11,6 +11,13 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { BodyComponent } from './components/dashboard/body/body.component';
+import { MyItemsComponent } from './components/dashboard/my-items/my-items.component';
+import { AddItemComponent } from './components/dashboard/add-item/add-item.component';
+import { SideNavComponent } from './components/dashboard/side-nav/side-nav.component';
+import { DashboardComponent } from './components/dashboard/dashboard/dashboard.component';
+import { RequestsComponent } from './components/dashboard/requests/requests.component';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +27,14 @@ import { ContactComponent } from './components/contact/contact.component';
     LoginFormComponent,
     SignupFormComponent,
     OurTeamComponent,
-    ContactComponent
+    ContactComponent,
+    BodyComponent,
+    MyItemsComponent,
+    AddItemComponent,
+    SideNavComponent,
+    DashboardComponent,
+    RequestsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

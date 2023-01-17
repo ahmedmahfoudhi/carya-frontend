@@ -1,7 +1,4 @@
-*{
-    font-family:'Monda';
-    font-weight: bold;
-}
+
 body,div,h1,h2,form,fieldset,input,textarea,footer,p{
     margin: 0;
     padding: 0;
@@ -35,7 +32,7 @@ section::after{
     top: 5em;
     left: -10em;
     width: 80%;
-    height: 100%;
+    height: 90%;
     background: linear-gradient(#9E7676,#815B5B);
     clip-path: circle(20% at 15% 40%);
 }
