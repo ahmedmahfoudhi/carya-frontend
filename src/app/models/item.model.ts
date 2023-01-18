@@ -1,6 +1,9 @@
-export interface Item{
-    id: string;
-    images: string[];
-    price: number;
-    
+export interface Item {
+  _id: string;
+  images?: string[];
+  price: string;
+  description: string;
+  user: string;
+  city: string;
+  __t: string;
 }

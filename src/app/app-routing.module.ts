@@ -17,8 +17,8 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: '', component: HomeSectionsComponent },
-      { path: 'cars', component: ItemsListComponent },
-      { path: 'houses', component: ItemsListComponent },
+      { path: 'properties', component: ItemsListComponent },
+      { path: 'properties', component: ItemsListComponent },
     ],
   },
   { path: '', component: OurTeamComponent },

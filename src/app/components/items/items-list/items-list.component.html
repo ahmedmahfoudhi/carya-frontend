@@ -1,43 +1,39 @@
 <section>
-<div class="container mt-5">
+  <div class="container mt-5">
     <div class="section_title">
-    <h2>Properties List</h2>
+      <h2>Properties List</h2>
     </div>
-  <!--Filter-->
-  <div class="row">
-    <div class="col-lg-3 h-50 p-4 shadow-lg">
-      <app-filter></app-filter>
-    </div>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-8 p-4 shadow-lg">
-      <!--Properties List-->
-      <div class="row">
-        <div class="col-md-4">
-          <app-single-item></app-single-item>
-        </div>
-        <div class="col-md-4">
-          <app-single-item></app-single-item>
-        </div>
-        <div class="col-md-4">
-          <app-single-item></app-single-item>
-        </div>
-        <div class="col-md-4">
-          <app-single-item></app-single-item>
-        </div>
-        <div class="col-md-4">
-          <app-single-item></app-single-item>
-        </div>
+    <!--Filter-->
+    <div class="row">
+      <div class="col-lg-3 h-50 p-4 shadow-lg">
+        <app-filter
+          [governorate]="governorate"
+          [minValue]="mnPrice"
+          [maxValue]="mxPrice"
+          [category]="category"
+        ></app-filter>
       </div>
-      <nav aria-label="...">
-        <ul class="pagination pagination-sm justify-content-center">
-          <li class="page-item active" aria-current="page">
-            <span class="page-link">1</span>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-        </ul>
-      </nav>
+      <div class="col-lg-1"></div>
+      <div class="col-lg-8 p-4 shadow-lg">
+        <!--Properties List-->
+        <div class="row">
+          <div *ngFor="let item of items" class="col-md-4">
+            <app-single-item
+              [item]="item"
+              [image]="item.images ? item.images[0] : ''"
+            ></app-single-item>
+          </div>
+        </div>
+        <nav aria-label="...">
+          <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">1</span>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
-</div>
 </section>
