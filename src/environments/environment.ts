@@ -5,6 +5,32 @@
 export const environment = {
   production: false,
   backendUrl: 'http://localhost:3000/',
+  governorates: [
+    'Ariana',
+    'Béja',
+    'Ben Arous',
+    'Bizerte',
+    'Gabes',
+    'Gafsa',
+    'Jendouba',
+    'Kairouan',
+    'Kasserine',
+    'Kebili',
+    'Kef',
+    'Mahdia',
+    'Sousse',
+    'Manouba',
+    'Medenine',
+    'Monastir',
+    'Nabeul',
+    'Sfax',
+    'Sidi Bouzid',
+    'Siliana',
+    'Tatouine',
+    'Tozeur',
+    'Tunis',
+    'Zaghouan',
+  ],
 };
 
 /*

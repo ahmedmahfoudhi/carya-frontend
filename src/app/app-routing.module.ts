@@ -10,7 +10,11 @@ import { HomeComponent } from './components/home/home.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { ItemsListComponent } from './components/items/items-list/items-list.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
+
 import { CarouselComponent } from './shared/carousel/carousel.component';
+
+import { AuthGuardGuard } from './guards/auth-guard.guard';
+
 
 const routes: Routes = [
   {
@@ -18,9 +22,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: '', component: HomeSectionsComponent },
-      { path: 'cars', component: ItemsListComponent,},
-      { path: 'houses', component: ItemsListComponent },
       { path: 'item-details', component: ItemDetailsComponent },
+      { path: 'properties', component: ItemsListComponent },
+      { path: 'properties', component: ItemsListComponent },
+
     ],
   },
   { path: '', component: OurTeamComponent },
@@ -28,6 +33,7 @@ const routes: Routes = [
   {
     path: 'user',
     component: DashboardComponent,
+    canActivate:[AuthGuardGuard],
     children: [
       { path: 'my-items', component: MyItemsComponent },
       { path: 'add-item', component: AddItemComponent },

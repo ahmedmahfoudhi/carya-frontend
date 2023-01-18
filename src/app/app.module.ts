@@ -19,7 +19,7 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -32,8 +32,13 @@ import { DashboardComponent } from './components/dashboard/dashboard/dashboard.c
 import { RequestsComponent } from './components/dashboard/requests/requests.component';
 import { HomeComponent } from './components/home/home.component';
 import { HomeSectionsComponent } from './components/home-sections/home-sections.component';
+import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 import { FooterComponent } from './components/footer/footer.component';
+
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
+
+import { DefaultImagePipe } from './pipes/default-image.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +63,7 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
     HomeSectionsComponent,
     FooterComponent,
     ItemDetailsComponent,
+    DefaultImagePipe,
   ],
   imports: [
     BrowserModule,
@@ -75,7 +81,7 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
     }),
     HttpClientModule,
   ],
-  providers: [],
+  providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthInterceptorService,multi:true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
