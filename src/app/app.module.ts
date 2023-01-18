@@ -33,6 +33,7 @@ import { RequestsComponent } from './components/dashboard/requests/requests.comp
 import { HomeComponent } from './components/home/home.component';
 import { HomeSectionsComponent } from './components/home-sections/home-sections.component';
 import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
+import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,6 +56,7 @@ import { AuthInterceptorService } from './interceptors/auth-interceptor.service'
     RequestsComponent,
     HomeComponent,
     HomeSectionsComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
