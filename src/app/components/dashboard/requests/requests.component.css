@@ -60,7 +60,7 @@ section::before{
   .card h5 {
     margin: 0px;
     padding: 0px 0px 15px 0px;
-    font-size: 30px;
+    font-size: 25px;
     color: #282828;
   }
   .card hr {
@@ -83,7 +83,7 @@ section::before{
     font-weight: 100;
     letter-spacing: -0.25px;
     line-height: 1.25;
-    font-size: 16px;
+    font-size: 13px;
     word-break: break-all;
     word-wrap: pre-wrap;
     color: #282828;

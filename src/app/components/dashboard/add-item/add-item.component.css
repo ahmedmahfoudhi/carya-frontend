@@ -89,7 +89,7 @@ section::after{
   padding: 0;
   margin: 10px auto;
   cursor: pointer;
-  background-color: #fff;
+  background-color: #9E7676;
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before{
@@ -100,7 +100,6 @@ section::after{
   border-radius: 50%;
   color: #fff;
   background-color: #9E7676;
-  font-family: 'unicons';
   content: '';
   z-index: 20;
   top: -10px;
@@ -137,7 +136,7 @@ section::after{
 }
 .card-front, .card-back {
   width: 100%;
-  height: 100%;
+  height: 120%;
   background-color: #9E7676;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
@@ -180,7 +179,7 @@ section::after{
 }
 .form-style {
   padding: 13px 20px;
-  padding-left: 55px;
+  text-align: center;
   height: 48px;
   width: 100%;
   font-weight: 500;
@@ -195,6 +194,17 @@ section::after{
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
   box-shadow: 0 4px 8px 0 rgba(21,21,21,.2);
+}
+.form-row{
+  display: flex;
+}
+.input1{
+  margin-right: 8px;
+}
+#message{
+  margin-top: 10px;
+  width: 100%;
+  
 }
 .form-style:focus,
 .form-style:active {

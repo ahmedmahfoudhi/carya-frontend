@@ -6,7 +6,18 @@
   display: flex;
   justify-content: space-between;
 }
+.controls-wrapper .btn-info{
+  background-color:rgb(129, 91, 91) ;
+  border-color: rgb(129, 91, 91);
+  color: #FFF8EA;
+}
+.controls-wrapper .btn-secondary{
+  background-color:#FFF8EA ;
+  border-color: rgb(129, 91, 91);
+  color: rgb(129, 91, 91);
+}
 
 .w-40 {
   width: 40%;
+  
 }
