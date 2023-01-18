@@ -7,9 +7,14 @@ import { MyItemsComponent } from './components/dashboard/my-items/my-items.compo
 import { RequestsComponent } from './components/dashboard/requests/requests.component';
 import { HomeSectionsComponent } from './components/home-sections/home-sections.component';
 import { HomeComponent } from './components/home/home.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { ItemsListComponent } from './components/items/items-list/items-list.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
+
+import { CarouselComponent } from './shared/carousel/carousel.component';
+
 import { AuthGuardGuard } from './guards/auth-guard.guard';
+
 
 const routes: Routes = [
   {
@@ -17,8 +22,10 @@ const routes: Routes = [
     component: HomeComponent,
     children: [
       { path: '', component: HomeSectionsComponent },
+      { path: 'item-details', component: ItemDetailsComponent },
       { path: 'properties', component: ItemsListComponent },
       { path: 'properties', component: ItemsListComponent },
+
     ],
   },
   { path: '', component: OurTeamComponent },
@@ -33,6 +40,7 @@ const routes: Routes = [
       { path: 'requests', component: RequestsComponent },
     ],
   },
+  
 ];
 
 @NgModule({

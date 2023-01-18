@@ -34,7 +34,11 @@ import { HomeComponent } from './components/home/home.component';
 import { HomeSectionsComponent } from './components/home-sections/home-sections.component';
 import { AuthInterceptorService } from './interceptors/auth-interceptor.service';
 import { FooterComponent } from './components/footer/footer.component';
+
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
+
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +62,7 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     HomeComponent,
     HomeSectionsComponent,
     FooterComponent,
+    ItemDetailsComponent,
     DefaultImagePipe,
   ],
   imports: [
