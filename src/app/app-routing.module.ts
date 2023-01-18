@@ -9,6 +9,7 @@ import { HomeSectionsComponent } from './components/home-sections/home-sections.
 import { HomeComponent } from './components/home/home.component';
 import { ItemsListComponent } from './components/items/items-list/items-list.component';
 import { OurTeamComponent } from './components/our-team/our-team.component';
+import { AuthGuardGuard } from './guards/auth-guard.guard';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
   {
     path: 'user',
     component: DashboardComponent,
+    canActivate:[AuthGuardGuard],
     children: [
       { path: 'my-items', component: MyItemsComponent },
       { path: 'add-item', component: AddItemComponent },
