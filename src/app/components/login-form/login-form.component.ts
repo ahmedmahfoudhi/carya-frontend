@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { LoginResponse } from 'src/app/interfaces/login-response.interface';
@@ -17,7 +18,8 @@ export class LoginFormComponent implements OnInit {
     public activeModal: NgbActiveModal,
     private modalService: NgbModal,
     private authService: AuthService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private router:Router
   ) {}
 
   ngOnInit(): void {}
@@ -52,6 +54,8 @@ export class LoginFormComponent implements OnInit {
     console.log(res);
     this.toastr.success('Successfully logged in');
     this.isLoading = false;
+    this.closeModal("loggedin");
+    this.router.navigate(['/user']);
   }
 
   handleError(error: Error) {
