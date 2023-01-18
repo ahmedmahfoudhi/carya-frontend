@@ -33,6 +33,7 @@ import { RequestsComponent } from './components/dashboard/requests/requests.comp
 import { HomeComponent } from './components/home/home.component';
 import { HomeSectionsComponent } from './components/home-sections/home-sections.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     HomeSectionsComponent,
     FooterComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,

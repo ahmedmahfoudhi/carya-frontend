@@ -1,0 +1,72 @@
+<section *ngIf="check" >
+<app-carousel ></app-carousel>
+<app-car-details></app-car-details>
+
+  
+<div class="section">
+    <div class="container">
+        <div class="row full-height justify-content-center">
+            <div class="col-12 text-center align-self-center py-5">
+                <div class="section pb-5 pt-5 pt-sm-2 text-center">
+
+                    <div class="card-3d-wrap mx-auto">
+                        <div class="card-3d-wrapper">
+                            <div class="card-front">
+                                <div class="center-wrap">
+                                    <div class="section text-center">
+                                        <h4 class="mb-4 pb-3">SEND A REQUEST</h4>
+                                        <div class="form-row">
+                                            <div class="form-group mt-2 input1">
+                                                <input type="text" #firstName="ngModel"
+                                                ngModel
+                                                required
+                                                class="form-control"
+                                                id="inputFirstName4"
+                                                minlength="3"
+                                                name="firstName" class="form-style" placeholder="Your First Name" id="firstname" autocomplete="off">
+                                                <i class="input-icon uil uil-at"></i>
+                                                <p *ngIf="!firstName.valid && firstName.touched" class="help-block"
+                                                >Firstname should have at least 3 characters.</p
+                                              >
+                                            </div>
+  
+       
+                                            <div class="form-group mt-2 ">
+                                                <input type="text" #lastName="ngModel"
+                                                ngModel
+                                                required
+                                                class="form-control"
+                                                id="inputLastName4"
+                                                minlength="3"
+                                                name="lastName"
+                                                class="form-style" placeholder="Your Last Name" id="lastname" autocomplete="off"
+                                              />
+                                              <p *ngIf="!lastName.valid && lastName.touched" class="help-block"
+                                                >Lastname should have at least 3 characters.</p
+                                              > 
+                                                <i class="input-icon uil uil-at"></i>												</div>
+                                            </div>	
+                                            <div class="form-group mt-2 ">
+                                                <input type="text" name="phone" ngModel
+                                                #phone="ngModel"
+                                                minlength="8"
+                                                maxlength="8"
+                                                required class="form-style" placeholder="Your Phone Number" id="phone" autocomplete="off">
+                                                <span *ngIf="!phone.valid && phone.touched" class="help-block">
+                                                    Invalid Phone Number
+                                                  </span>
+                                                <i class="input-icon uil uil-at"></i>												</div>
+                                            <textarea name="message" id="message" cols="30" rows="5" ></textarea>
+                                
+                                        <a href="#" class="btn mt-4">SEND</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+                              </div>
+</section>
