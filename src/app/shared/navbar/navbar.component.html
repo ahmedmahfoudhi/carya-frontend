@@ -45,16 +45,22 @@
         <li class="nav-item"><a class="nav-link" routerLink="">Contact</a></li>
       </ul>
 
-      <button *ngIf="!isAuthenticated"
+      <button
+        *ngIf="!isAuthenticated"
         type="button"
         class="btn btn-secondary btn-lg"
         (click)="openModalLogin()"
       >
         Login
       </button>
-      <i *ngIf="isAuthenticated" class="fa fa-user" [routerLink]="['/user']" ></i>
+      <i
+        *ngIf="isAuthenticated"
+        class="fa fa-user avatar"
+        [routerLink]="['/user/my-items']"
+      ></i>
       <div class="divider"></div>
-      <button *ngIf="!isAuthenticated"
+      <button
+        *ngIf="!isAuthenticated"
         type="button"
         class="btn btn-secondary btn-lg"
         (click)="openModalRegister()"

@@ -19,5 +19,4 @@ export const navbarData = [
     icon: 'fa fa-paper-plane',
     label: 'Requests',
   },
-  
 ];

@@ -19,7 +19,7 @@ export class LoginFormComponent implements OnInit {
     private modalService: NgbModal,
     private authService: AuthService,
     private toastr: ToastrService,
-    private router:Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -54,8 +54,8 @@ export class LoginFormComponent implements OnInit {
     console.log(res);
     this.toastr.success('Successfully logged in');
     this.isLoading = false;
-    this.closeModal("loggedin");
-    this.router.navigate(['/user']);
+    this.closeModal('loggedin');
+    this.router.navigate(['/user/my-items']);
   }
 
   handleError(error: Error) {

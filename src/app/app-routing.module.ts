@@ -15,7 +15,6 @@ import { CarouselComponent } from './shared/carousel/carousel.component';
 
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -25,7 +24,6 @@ const routes: Routes = [
       { path: 'item-details', component: ItemDetailsComponent },
       { path: 'properties', component: ItemsListComponent },
       { path: 'properties', component: ItemsListComponent },
-
     ],
   },
   { path: '', component: OurTeamComponent },
@@ -33,14 +31,14 @@ const routes: Routes = [
   {
     path: 'user',
     component: DashboardComponent,
-    canActivate:[AuthGuardGuard],
+    canActivate: [AuthGuardGuard],
     children: [
       { path: 'my-items', component: MyItemsComponent },
       { path: 'add-item', component: AddItemComponent },
       { path: 'requests', component: RequestsComponent },
     ],
   },
-  
+  { path: '**', redirectTo: '', component: HomeComponent },
 ];
 
 @NgModule({

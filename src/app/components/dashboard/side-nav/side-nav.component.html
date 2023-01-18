@@ -8,7 +8,7 @@
   </div>
   <ul class="sidenav-nav">
     <li class="sidenav-nav-item" *ngFor="let data of navData">
-      <a 
+      <a
         class="sidenav-nav-link"
         [routerLink]="[data.routeLink]"
         routerLinkActive="active"
@@ -24,6 +24,10 @@
         </i>
       </a>
     </li>
-    <li style="color: white"><a (click)="onLogout()" >Logout</a></li>
+    <li class="sidenav-nav-item text-center sidenav-link" style="color: white">
+      <a (click)="onLogout()"
+        ><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a
+      >
+    </li>
   </ul>
 </div>
