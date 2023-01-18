@@ -1,18 +1,26 @@
 <div class="filter">
   <div class="mb-3">
     <label class="form-label">Category :</label>
-    <select class="form-select" aria-label="Default select example">
-      <option value="all" selected>All</option>
-      <option value="cars">Cars</option>
-      <option value="houses">Houses</option>
+    <select
+      [(ngModel)]="category"
+      class="form-select"
+      aria-label="Default select example"
+    >
+      <option *ngFor="let categ of categories" value="{{ categ.value }}">
+        {{ categ.displayName }}
+      </option>
     </select>
   </div>
   <div class="mb-3">
     <label class="form-label">Governorate :</label>
-    <select class="form-select" aria-label="Default select example">
-      <option value="all" selected>All</option>
-      <option value="cars">Cars</option>
-      <option value="houses">Houses</option>
+    <select
+      [(ngModel)]="governorate"
+      class="form-select"
+      aria-label="Default select example"
+    >
+      <option *ngFor="let gover of governorates" value="{{ gover.value }}">
+        {{ gover.displayName }}
+      </option>
     </select>
   </div>
   <div class="mb-3">

@@ -26,10 +26,20 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="cars">Vehicles</a>
+          <a
+            class="nav-link"
+            [routerLink]="['properties']"
+            [queryParams]="{ category: 'car' }"
+            >Vehicles</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="houses">Houses</a>
+          <a
+            class="nav-link"
+            [routerLink]="['properties']"
+            [queryParams]="{ category: 'home' }"
+            >Houses</a
+          >
         </li>
         <li class="nav-item"><a class="nav-link" routerLink="">About</a></li>
         <li class="nav-item"><a class="nav-link" routerLink="">Contact</a></li>

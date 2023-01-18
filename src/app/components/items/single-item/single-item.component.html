@@ -1,12 +1,14 @@
 <div class="product-wrapper mb-45 text-center rounded shadow-lg">
   <div class="product-img">
-    <img src="https://i.imgur.com/tL7ZE46.jpg" alt="" />
+    <img src="{{ image | defaultImage : item.__t }}" alt="" />
 
     <span class="text-center"
-      ><fa-icon [icon]="faDollarSign"></fa-icon> 43,000</span
+      ><fa-icon [icon]="faDollarSign"></fa-icon> {{ item.price }}</span
     >
     <div class="product-action">
-      <button class="rounded btn product-action-style">Details</button>
+      <a routerLink="details/{{ item._id }}"
+        ><button class="rounded btn product-action-style">Details</button></a
+      >
     </div>
   </div>
 </div>

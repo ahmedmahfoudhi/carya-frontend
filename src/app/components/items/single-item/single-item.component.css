@@ -1,10 +1,21 @@
 * {
   box-sizing: border-box;
 }
+.product-wrapper {
+  height: 350px;
+}
 .product-wrapper,
 .product-img {
   overflow: hidden;
   position: relative;
+}
+
+.product-img {
+  height: 100%;
+}
+
+.product-img img {
+  height: 100%;
 }
 
 .mb-45 {

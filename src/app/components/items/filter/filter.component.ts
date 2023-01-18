@@ -1,47 +1,69 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 const maxPossiblePrice = 4000;
-const minPossiblePrice = 0;  
+const minPossiblePrice = 0;
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  styleUrls: ['./filter.component.css'],
 })
-  
-  
 export class FilterComponent implements OnInit {
-
-  minValue: number = minPossiblePrice;
-  maxValue: number = maxPossiblePrice;
+  @Input() minValue: number = minPossiblePrice;
+  @Input() maxValue: number = maxPossiblePrice;
+  @Input() governorate: string = 'all';
+  @Input() category: string = 'all';
+  categories = [
+    { value: 'all', displayName: 'All' },
+    { value: 'home', displayName: 'Houses' },
+    { value: 'car', displayName: 'Cars' },
+  ];
+  governorates;
   options: Options = {
     floor: minPossiblePrice,
     ceil: maxPossiblePrice,
     translate: (value: number, label: LabelType): string => {
       switch (label) {
         case LabelType.Low:
-          return "$" + value;
+          return '$' + value;
         case LabelType.High:
-          return "$" + value;
+          return '$' + value;
         default:
-          return "$" + value;
+          return '$' + value;
       }
-    }
+    },
+  };
+  constructor(private router: Router) {
+    this.governorates = environment.governorates.map((governorate) => ({
+      value: governorate.toLowerCase(),
+      displayName: governorate,
+    }));
+    this.governorates.unshift({
+      value: 'all',
+      displayName: 'All',
+    });
   }
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   applyFilter() {
-    console.log(this.minValue, this.maxValue);
+    this.router.navigate(['/properties'], {
+      queryParams: {
+        category: this.category,
+        minPrice: this.minValue,
+        maxPrice: this.maxValue,
+        governorate: this.governorate,
+      },
+    });
   }
 
   resetFilter() {
     this.minValue = minPossiblePrice;
     this.maxValue = maxPossiblePrice;
+    this.category = 'all';
+    this.governorate = 'all';
   }
-
 }
