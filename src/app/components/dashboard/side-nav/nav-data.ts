@@ -19,9 +19,5 @@ export const navbarData = [
     icon: 'fa fa-paper-plane',
     label: 'Requests',
   },
-  {
-    routeLink: 'logout',
-    icon: 'fa fa-sign-out',
-    label: 'Logout',
-  },
+  
 ];

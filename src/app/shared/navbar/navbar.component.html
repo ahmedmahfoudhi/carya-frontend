@@ -35,15 +35,16 @@
         <li class="nav-item"><a class="nav-link" routerLink="">Contact</a></li>
       </ul>
 
-      <button
+      <button *ngIf="!isAuthenticated"
         type="button"
         class="btn btn-secondary btn-lg"
         (click)="openModalLogin()"
       >
         Login
       </button>
+      <i *ngIf="isAuthenticated" class="fa fa-user" [routerLink]="['/user']" ></i>
       <div class="divider"></div>
-      <button
+      <button *ngIf="!isAuthenticated"
         type="button"
         class="btn btn-secondary btn-lg"
         (click)="openModalRegister()"
