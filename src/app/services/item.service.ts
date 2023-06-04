@@ -11,7 +11,7 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   getAllItems(queryParams: ItemsQueryParams) {
-    let url = environment.backendUrl + 'item';
+    let url = environment.backendUrl + '/item';
     let key: keyof typeof queryParams;
     let firstParam = true;
     for (key in queryParams) {

@@ -1,6 +1,7 @@
 import { LabelType, Options } from '@angular-slider/ngx-slider';
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { GOVERNORATES } from 'src/app/shared/governorates';
 import { environment } from 'src/environments/environment';
 
 const maxPossiblePrice = 4000;
@@ -37,7 +38,7 @@ export class FilterComponent implements OnInit {
     },
   };
   constructor(private router: Router) {
-    this.governorates = environment.governorates.map((governorate) => ({
+    this.governorates = GOVERNORATES.map((governorate) => ({
       value: governorate.toLowerCase(),
       displayName: governorate,
     }));

@@ -17,7 +17,7 @@ export class AuthService {
 
   login(email: string, password: string) {
     return this.http.post<LoginResponse>(
-      environment.backendUrl + 'auth/login',
+      environment.backendUrl + '/auth/login',
       {
         email: email,
         password: password,
@@ -35,7 +35,7 @@ export class AuthService {
     localStorage.setItem('user',JSON.stringify(curUser));
   }
   register(user: User) {
-    return this.http.post(environment.backendUrl + 'auth/register', user);
+    return this.http.post(environment.backendUrl + '/auth/register', user);
   }
 
   logout(){
